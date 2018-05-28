@@ -15,11 +15,10 @@ public class Phone {
 	private String number;
 
 	@ManyToOne
-	@JoinColumns
-	({ 
-		@JoinColumn(name = "company_id", referencedColumnName = "company_id"),
-		@JoinColumn(name = "employee_number", referencedColumnName = "employee_number") 
-	})
+	@JoinColumns({ 
+					@JoinColumn(name = "emp_company_id", referencedColumnName = "company_id"),
+					@JoinColumn(name = "emp_employee_number", referencedColumnName = "employee_number") 
+				})
 	private Employee employee;
 
 	public Employee getEmployee() {
